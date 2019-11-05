@@ -2,7 +2,6 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
-    /*ПРОВЕРИТЬ ПОСЛЕДОВАТЕЛЬНОСТЬ*/
     less: {
       style: {
         files: {
@@ -163,6 +162,17 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask ("serve", [
+    "clean",
+    "copy",
+    "concat",
+    "uglify",
+    "less",
+    "postcss",
+    "csso",
+    "svgo",
+    "svgstore",
+    "posthtml",
+    "htmlmin",
     "browserSync",
     "watch"
   ])
