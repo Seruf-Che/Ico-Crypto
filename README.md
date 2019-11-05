@@ -5,4 +5,4 @@
  <br>
  Use <code>grunt serve</code> to run development server.
  <br>
- <a href="http://seruf.eu5.org/portfolio/ico-crypto/index.html">Demo page</a>
+ <a target="_blank" href="http://seruf.eu5.org/portfolio/ico-crypto/index.html">Demo page</a>
