@@ -1,0 +1,25 @@
+.clients {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clients__item {
+  margin-bottom: 40px;
+  width: 160px;
+  height: 60px;
+  fill: @color-heading;
+}
+
+@media only screen and @mobile-width {
+
+  .clients {
+    justify-content: space-around;
+  }
+  
+  .clients__item {
+    margin: 0 20px 20px 20px;
+  }
+}

@@ -1,0 +1,50 @@
+.tabs {
+  
+}
+
+.tabs__wrapper {
+  display: flex;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.tabs__item {
+  display: flex;
+  margin-right: 16px;
+}
+
+.tabs__anchor {
+  padding: 12px 17px;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: @color-heading;
+  transition: @transition;
+  outline:none;
+  
+  &:hover {
+    color: @color-accented; 
+  }
+}
+
+.ui-state-active .tabs__anchor {
+  color: @color-accented;
+  background-color: rgba(22, 162, 255, 0.1);
+}
+
+.tabs__content {
+  width: 100%;
+}
+
+@media only screen and @mobile-width {
+  
+  .tabs__wrapper {
+    flex-wrap: wrap;
+  }
+  
+  .tabs__item {
+    width: 100%;
+  }
+}

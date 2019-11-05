@@ -1,0 +1,31 @@
+.page-footer {
+  position: relative;
+  padding: 170px 0 55px 0;
+  background-color: #22136b;
+  background-image: url(../img/footer-background.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.page-footer--filter {
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: 
+      linear-gradient(0deg, rgba(34, 19, 107, 0.2) 0%, rgba(34, 19, 107, 1) 100%);
+  }
+}
+
+@media only screen and @mobile-width {
+  
+  .page-footer {
+    padding-top: 150px;
+    padding-bottom: 30px;
+  }
+}

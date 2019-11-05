@@ -1,0 +1,45 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 1110px;
+  z-index: 1;
+}
+
+.container__section {
+  margin-bottom: 100px;
+}
+
+.container--center-align {
+  align-items: center;  
+}
+
+.container--centred {
+  justify-content: space-around;
+  width: 42%;
+  margin: 0 auto;
+}
+
+.container--flow {
+  margin-bottom: -110px;
+  padding: 60px;
+  background-color: #5a4bc8;
+  border-radius: 6px;
+}
+
+@media only screen and @tablet-width {
+ 
+  .container {
+    width: 100%;
+  }
+}
+
+//@media only screen and @mobile-width {
+// 
+//  .container {
+//    padding: 20px;
+//  }
+//}

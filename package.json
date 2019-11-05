@@ -1,0 +1,38 @@
+{
+  "name": "Seruf-build",
+  "version": "1.0.0",
+  "description": "Seruf's build",
+  "main": "index.js",
+  "dependencies": {
+    "grunt-csso": "^2.2.1",
+    "imagemin-jpegtran": "^5.0.2",
+    "jquery.counterup": "^2.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.0.0",
+    "grunt": "^1.0.2",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-cwebp": "^2.1.1",
+    "grunt-juwain-posthtml": "^0.6.0",
+    "grunt-postcss": "^0.9.0",
+    "grunt-svgo": "^0.1.0",
+    "grunt-svgstore": "^1.0.0",
+    "load-grunt-tasks": "^3.5.2",
+    "posthtml-include": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "grunt build"
+  },
+  "author": "",
+  "license": "ISC"
+}

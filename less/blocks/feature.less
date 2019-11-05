@@ -1,0 +1,134 @@
+.feature {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  
+}
+
+.feature__item {
+  position: relative;
+  display: block;
+  padding: 30px 30px;
+  width: 350px;
+  text-align: center;
+  background-color: @color-background;
+  border-radius: 6px;
+}
+
+.feature__title {
+  margin: 0;
+  margin-top: 37px;
+  color: @color-accented;
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 300;
+}
+
+.feature__sub-title {
+  margin: 6px 0 19px 0;
+  color: @color-sub-heading;
+  font-size: 15px;
+  line-height: 35px;
+  font-weight: 300;
+}
+
+.feature__description {
+  position: relative;
+  margin: 0;
+  margin-bottom: 22px;
+  padding-top: 22px;
+  color: #a89ffe;
+  font-size: 15px;
+  line-height: 31px;
+  font-weight: 300;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: @color-accented;
+  }
+}
+
+.feature__link {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background-color: @color-accented;
+  border-radius: 50%;
+  opacity: 0;
+  transition: @transition;
+  
+  & svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    fill: @color-heading;
+    transition: @transition;
+  }
+  
+  &:hover {
+    background-color: @color-accented-hovered;
+  }
+  
+  &:hover svg {
+    fill: @color-accented;
+  }
+}
+
+.feature__item:hover .feature__link {
+  bottom: -25px;
+  opacity: 1;
+}
+
+.feature__section {
+  margin-top: 55px;
+  margin-bottom: 110px;
+}
+
+@media only screen and @tablet-width {
+  
+  .feature {
+    justify-content: space-around;
+  }
+  
+  .feature__item {
+    margin: 20px 20px 30px;
+  }
+  
+  .feature__section {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  
+  .feature__link {
+    bottom: -25px;
+    opacity: 1;
+  }
+}
+
+@media only screen and @mobile-width {
+  .feature__item {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .feature__section {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}

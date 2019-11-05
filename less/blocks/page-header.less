@@ -1,0 +1,56 @@
+.page-header {
+  position: relative;
+  background: linear-gradient(-45deg, #190a85 0%,#6757d4 100%);
+  padding-top: 79px;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: 
+      linear-gradient(60deg, rgba(0, 0, 0, 0) 36%, rgba(0, 52, 86, 0.03) 36%),
+      linear-gradient(60deg, rgba(0, 0, 0, 0) 47%, rgba(0, 0, 0, 0.05) 47%),
+      linear-gradient(60deg, rgba(0, 0, 0, 0) 58%, rgba(0, 0, 0, 0.05) 58%);
+  }
+}
+
+.page-header__inner {
+  position: relative;
+  padding-top: 133px;
+  padding-bottom: 150px;
+  z-index: 9999;
+}
+
+.page-header__img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto
+}
+
+@media only screen and @tablet-width {
+ 
+  .page-header {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0;
+    
+      &::after {
+        background:
+          linear-gradient(60deg,rgba(0,0,0,.1),rgba(0,0,0,.4)),
+          linear-gradient(60deg, rgba(0, 0, 0, 0.1) 36%, rgba(0, 0, 0, 0.13) 36%),
+          linear-gradient(60deg, rgba(0, 0, 0, 0) 47%, rgba(0, 0, 0, 0.15) 47%),
+          linear-gradient(60deg, rgba(0, 0, 0, 0) 58%, rgba(0, 0, 0, 0.15) 58%);
+    }
+  }
+  
+  .page-header__inner {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+}

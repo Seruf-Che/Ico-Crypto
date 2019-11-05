@@ -1,0 +1,109 @@
+.countdown__page-header {
+  margin-top: 61px;
+  margin-bottom: 48px;
+}
+
+.countdown {
+  position: relative;
+  padding: 32px 5px 60px 39px;
+  background-color: @color-background-dark;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.countdown__heading {
+  margin: 0;
+  margin-bottom: 10px;
+  color: @color-content-dark;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.countdown__timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  margin-left: -20px;
+  align-items: center;
+  width: 100%;
+}
+
+.countdown__item {
+  position: relative;
+  text-align: center;
+  padding: 0 15px;
+  color: @color-content-light;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 300;
+  width: 25%;
+  
+  &::after {
+    position: absolute;
+    content: ':';
+    top: 0;
+    right: -4px;    
+  }
+  
+  &--last::after {
+    display: none;
+    }
+}
+
+.countdown__title {
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%; 
+  color: @color-accented;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+}
+
+.countdown__button {
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+@media only screen and @tablet-width{
+  
+  .countdown__page-header {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and @mobile-width {
+  
+  .countdown {
+    padding: 32px 0 60px 0;
+    width: 100%;
+    background-color: transparent;
+  }
+  
+  .countdown__timer {
+    justify-content: space-around;
+    margin: 0;
+  }
+  
+  .countdown__item {
+    font-size: 40px;
+  }
+  
+  .countdown__page-header {
+    margin-top: 20px;
+  }
+}
+
+
+

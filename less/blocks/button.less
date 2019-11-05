@@ -1,0 +1,174 @@
+.button {
+  position: relative;
+  display: block;
+  width: 150px;
+  color: @color-heading;
+  font-size: 12px;
+  line-height: 40px;
+  font-weight: 500;
+  text-align: center;
+  background: transparent;
+  border-width: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: @transition;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 154px;
+    height: 44px;
+    background: linear-gradient(to right, #a722f4 0%, #7a5cff 100%);
+    border-radius: 6px;
+    z-index: -2;
+    opacity: 1;
+    transition: @transition;
+  } 
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 154px;
+    height: 44px;
+    background: linear-gradient(to right, #7a5cff 0%, #a722f4 100%);
+    border-radius: 6px;
+    z-index: -1;
+    opacity: 0;
+    transition: @transition;
+  } 
+  
+  &:hover {
+    color: @color-heading;
+    transition: @transition;
+  }
+  
+  &:hover::after {
+    opacity: 1;
+  }
+    
+  &:hover::before {
+    opacity: 0;
+  }
+}
+
+.button__menu {
+  margin-left: 12px; 
+}
+
+.button--menu {
+  line-height: 34px;
+  
+  &::before {
+    height: 38px;
+  } 
+  
+  &::after {
+    display: none;
+  }
+  
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.button--solid {
+  background: #362995;
+  
+  &:hover {
+    background: transparent;
+  }
+}
+
+.button--medium {
+  width: 200px;
+  
+  &::before {
+    width: 204px;
+  }
+  
+  &::after {
+    width: 204px;
+  }
+}
+
+.button--long {
+  width: 270px;
+  
+  &::before {
+    width: 274px;
+  }
+  
+  &::after {
+    width: 274px;
+  }
+}
+
+.button--high {
+  font-size: 15px;
+  line-height: 56px;
+  font-weight: 600;
+  
+  &::before {
+    height: 60px;
+  } 
+  
+  &::after {
+    height: 60px;
+  } 
+}
+
+.button--subscribe {
+  position: absolute;
+  right: 7px;
+  bottom: 8px;
+  text-transform: uppercase;
+  z-index: 2;
+  
+  &::after,
+  &::before {
+    top: 0px;
+    left: 0px;
+    width: 150px;
+    height: 42px;
+  }
+}
+
+@media only screen and @tablet-width {
+ 
+  .button--menu {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and @mobile-width {
+  
+  .button--mobile-margin {
+    margin-bottom: 20px;
+  }
+  
+  .button--mobile-full {
+    width: 100%;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    
+    &::after,
+    &::before {
+      width: 100%;
+      bottom: 0;
+      top: auto;
+      left: 0;
+//      border-top-right-radius: 0;
+//      border-top-left-radius: 0;
+    }
+  }
+  
+  .button--subscribe {
+    position: static;
+    
+    margin-top: 20px; 
+  }
+}
