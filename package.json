@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Seruf's build",
   "main": "index.js",
+  "homepage": "https://seruf-che.github.io/ico-crypto/",
   "dependencies": {
     "grunt-csso": "^2.2.1",
     "imagemin-jpegtran": "^5.0.2",
@@ -32,7 +33,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "grunt build"
+    "build": "grunt build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC"
