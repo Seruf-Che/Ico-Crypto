@@ -63,17 +63,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-    cwebp: {
-      images: {
-        options: {
-          q: 95
-        },
-        files: [{
-          expand: true,
-          src: ['build/img/**/*.{png,jpg}']
-        }]
-      }
-    },
     svgo: {
       optimize: {
         files: [{
